@@ -10,8 +10,17 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean stan = true;
         do{
-            System.out.println("777WITAMY W KASYNIE777\nWybierz gre\n[0]Exit\n[1]Lucky12\n[2]Ruletka\n[3]Rzut Moneta\n|Twoje saldo = "
-                    + playerOne.getMoney() + "|");
+            if(playerOne.getMoney() > 0) {
+
+                System.out.println("MENU KASYNA\nWybierz gre\n[0]Exit\n[1]Lucky12\n[2]Ruletka\n[3]Rzut Moneta" +
+                        "\n|Twoje saldo = "
+                        + playerOne.getMoney() + "|");
+            }else {
+                System.out.println("Wybierz gre\n[0]Exit\n[1]Lucky12\n[2]Ruletka\n[3]Rzut Moneta" +
+                        "\n|Twoje saldo = "
+                        + playerOne.getMoney() + "|\n" +
+                        "Wróć gdy nazbierasz troche siana B)");
+            }
             String choice = scanner.next();
             switch (choice) {
                 case "0" -> {

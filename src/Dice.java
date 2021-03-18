@@ -54,7 +54,7 @@ public class Dice {
 
                 } else {
                     System.out.println("Przegrałeś :( Może następnym razem sie uda :D \n");
-                    System.out.println("Przegrałeś:[ $" + amount + "\n");
+                    System.out.println("Straciłeś $" + amount + "\n");
                     player.setMoney(player.getMoney() - amount);
                     System.out.println("Stan konta $" + player.getMoney() + "\n");
                     if (player.getMoney() <= 0) {
