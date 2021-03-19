@@ -24,7 +24,7 @@ public class Main {
             String choice = scanner.next();
             switch (choice) {
                 case "0" -> {
-                    System.out.println("Exit");
+                    System.out.println("Wyszedłeś");
                     stan = false;
                 }
 

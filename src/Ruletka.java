@@ -8,11 +8,11 @@ public class Ruletka {
         Random random = new Random();
 
         double amount = 0;
-        int choice, win = 0, lose = 0, spin = 0;
+        int choice = -1, win = 0, lose = 0, spin = 0;
         int number;
         int rouletteNum;
         int result;
-        char response = 'y';
+        char response;
         int resultArr[] = new int[36];
         boolean ready = false, play = true;
         char sure;
@@ -27,7 +27,6 @@ public class Ruletka {
             while (play && player.getMoney() > 0) {
                 System.out.println("\nTwoje saldo = " + player.getMoney());
                 while (!ready) {
-
                     System.out.print("Ile chcesz postawic : ");
                     amount = scanner.nextDouble();
                     if (amount > player.getMoney()) {
@@ -38,15 +37,14 @@ public class Ruletka {
                         if (sure == 'y' || sure == 'Y') {
                             ready = true;
                         }
-                    } else {
+                    } else{
                         ready = true;
                     }
-
                 }
                 ready = false;
 
                 System.out.print("0 - parzyste\n1 - nieparzyste\n2 - Liczba\n");
-                choice = -1;
+
 
                 while (choice < 0 || choice > 2) {
                     System.out.print("Postaw  pieniadze na :");
